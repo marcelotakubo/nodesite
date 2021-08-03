@@ -11,5 +11,7 @@ spec:
       paths:
       - path: /
         backend:
-          serviceName: nodesite-service
-          servicePort: 8080
+          service:
+            name: nodesite-service
+            port:
+              number: 8080
