@@ -3,12 +3,11 @@ FROM node:14
 WORKDIR /usr/src/app
 
 #Install dependencies
-COPY package*.json ./
+COPY app/package*.json ./
 
 RUN npm install
 
-COPY . .
-
+COPY app/ ./
 
 EXPOSE 8080
 
