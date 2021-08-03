@@ -1,0 +1,14 @@
+{
+  "name": "nodesite",
+  "version": "1.0.0",
+  "description": "Node.js on Docker",
+  "author": "Marcelo Takubo <marcelo.takubo@gmail.com>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "supertest": "^6.1.4"
+  }
+}

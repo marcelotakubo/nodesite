@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodesite-deployment
+  labels:
+    app: nodesite
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodesite
+  template:
+    metadata:
+      labels:
+        app: nodesite
+    spec:
+      containers:
+      - name: nodesite
+        image: nodesite
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8080

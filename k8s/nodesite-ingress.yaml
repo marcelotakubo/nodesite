@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: nodesite-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: local.ecosia.org
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: nodesite-service
+          servicePort: 8080
