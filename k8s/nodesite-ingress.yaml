@@ -9,7 +9,8 @@ spec:
   - host: local.ecosia.org
     http:
       paths:
-      - path: /
+      - pathType: Prefix
+        path: /
         backend:
           service:
             name: nodesite-service
